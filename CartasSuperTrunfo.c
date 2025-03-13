@@ -93,14 +93,30 @@ int main()
     printf("\n\n");
 
     // comparando cartas
-    printf("Comparacao de Cartas:\n");
-    printf("Populacao: Carta %d venceu (%d)\n", (populacao1 < populacao2) + 1, (populacao1 > populacao2)); // se o resultado for 1 carta 1 ganhou se for 0 carta 2 ganhou
-    printf("Area: Carta %d venceu (%d)\n", (area1 < area2) + 1, (area1 > area2)); // se o resultado for 1 carta 1 ganhou se for 0 carta 2 ganhou
-    printf("PIB: Carta %d venceu (%d)\n", (pib1 < pib2) + 1, (pib1 > pib2)); // se o resultado for 1 carta 1 ganhou se for 0 carta 2 ganhou
-    printf("Pontos Turisticos: Carta %d venceu (%d)\n", (pontosTuristicos1 < pontosTuristicos2) + 1, (pontosTuristicos1 > pontosTuristicos2)); // se o resultado for 1 carta 1 ganhou se for 0 carta 2 ganhou
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", (densidadePop1 > densidadePop2) + 1, (densidadePop1 < densidadePop2)); // se o resultado for 0 carta 1 ganhou se for 1 carta 2 ganhou
-    printf("PIB per Capita: Carta %d venceu (%d)\n", (pibPerCapita1 < pibPerCapita2) + 1, (pibPerCapita1 > pibPerCapita2)); // se o resultado for 1 carta 1 ganhou se for 0 carta 2 ganhou
-    printf("Super Poder: Carta %d venceu (%d)\n", (superPoder1 < superPoder2) + 1, (superPoder1 > superPoder2)); // se o resultado for 1 carta 1 ganhou se for 0 carta 2 ganhou
+    // escolhi a populacao para comparar as cartas
+    printf("Comparacao de Cartas (Atributo: Populacao)\n\n");
+
+    // mostrando atributos da carta 1
+    printf("Carta 1 - %s:(%c) %ld\n", nomeCidade1, estado1, populacao1);
+
+    // mostrando atributos da carta 2
+    printf("Carta 2 - %s:(%c) %ld\n", nomeCidade2, estado2, populacao2);
+
+    if (populacao1 > populacao2)
+    {
+        // se a populacao da carta 1 for maior mostrar mensagem que ela venceu
+        printf("Resultado: Carta 1 (%s) venceu!\n", nomeCidade1);
+    }
+    else if (populacao1 < populacao2)
+    {
+        // se a populacao da carta 2 for maior mostrar mensagem que ela venceu
+        printf("Resultado: Carta 2 (%s) venceu!\n", nomeCidade2);
+    }
+    else
+    {
+        // se a populacao de ambas as cartas forem iguais mostrar mensagem de empate
+        printf("Empate!\n");
+    }
 
     return 0;
 }
